@@ -1,0 +1,227 @@
+main {
+  display: flex;
+  justify-content: center;
+  overflow:hidden;
+}
+
+main > svg{
+  transform:scale(1.05);
+  top:-0.5vw;
+  left:0;
+  right:0;
+  position: fixed;
+}
+
+/* p {
+  z-index:20;
+  position: absolute;
+  top: 2em;
+  text-align: justify;
+  left:50vw;
+  right:15vw;
+  font-size: 1.2em;
+} */
+p {
+  font-family: "Skema Pro Livro";
+  font-size: 1em;
+  color:white;
+}
+
+p.P1{
+  position: absolute;
+  top: 5em;
+  z-index: 20;
+}
+
+p.P2{
+  position: absolute;
+  top: 55em;
+  z-index: 20;
+}
+
+p.P3{
+  position: absolute;
+  top: 110em;
+  z-index: 20;
+}
+
+p.P4{
+  position: absolute;
+  top: 159em;
+  z-index: 20;
+}
+
+.volgende{
+  background-color: rgb(56, 56, 81);
+  top: 170em;
+  left:74.4vw;
+  padding: 15px 32px;
+  color: white;
+  position: absolute;
+  z-index: 20;
+  cursor: pointer;
+  text-align: center;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+  font-family: "Skema Pro Livro";
+}
+.volgende:hover{
+  background-color: #535375;
+}
+
+.terug{
+  background-color: rgb(56, 56, 81);
+  top: 170em;
+  left:50vw;
+  padding: 15px 32px;
+  color: white;
+  position: absolute;
+  z-index: 20;
+  cursor: pointer;
+  text-align: center;
+}
+
+.terug:hover{
+  background-color: #535375;
+}
+
+
+div.P5{
+  position: absolute;
+  width:10em;
+  height:10em;
+  top: 190em;
+  z-index: 20;
+}
+
+
+/* https://hansaarsman.nl/page/363/aarsman-collectie kleur van de tekstvlakken */
+.P1.delighter{
+  transition: all .3s ease-in;
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.delighter.P1.started {
+  transform: none;
+  opacity: 1;
+}
+
+.delighter.P1.started.ended {
+  background-color: #fc6a78;
+  padding: 2em;
+  margin-right: 3.5em;
+}
+
+
+.P2.delighter{
+  transition: all .3s ease-in;
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.P2.delighter.started {
+  transform: none;
+  opacity: 1;
+}
+
+.P2.delighter.started.ended {
+  background-color: #fc6a78;
+  padding: 2em;
+  margin-right: 3.5em;
+}
+
+.P3.delighter{
+  transition: all .3s ease-in;
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.P3.delighter.started {
+  transform: none;
+  opacity: 1;
+}
+
+.P3.delighter.started.ended {
+  background-color: #fc6a78;
+  padding: 2em;
+  margin-right: 3.5em;
+}
+
+.P4.delighter{
+  transition: all .3s ease-in;
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.P4.delighter.started {
+  transform: none;
+  opacity: 1;
+}
+
+.P4.delighter.started.ended {
+  background-color: #fc6a78;
+  padding: 2em;
+  margin-right: 3.5em;
+}
+
+
+
+/* WOLKEN ANIMTAIE */
+g#DUBBLEWOLK{
+  animation: wolken 5s ease infinite alternate;
+  opacity: 1;
+  z-index:10;
+}
+@keyframes wolken {
+  0%{
+    transform:translate(-0em, 1em);
+    opacity: 0.3;
+  }
+  25%{
+    transform:translate(-5em, 1em);
+     opacity: 0.7;
+  }
+  50%{
+    transform:translate(-7em, 1em);
+    opacity: 0.7;
+  }
+  75%{
+    transform:translate(-5em, 1em);
+    opacity: 0.5;
+  }
+  100%{
+    transform:translate(-0em, 1em);
+    opacity: 0.3;
+  }
+}
+
+path#Waterdunner, g#Walvis2{
+    animation: water 5s ease infinite alternate;
+  }
+
+/* Water, boot  en een walvis */
+g#BootNet, path#Waterdikker, g#Walvis1{
+  animation: water 3s ease infinite alternate;
+}
+
+@keyframes water {
+  0%{
+      transform:translate(1em, 1em);
+  }
+  25%{
+      transform:translate(2em, 0em);
+  }
+  50%{
+      transform:translate(3em, 1em);
+
+  75%{
+      transform:translate(2em, 0em);
+  }
+  100%{
+      transform:translate(1em, 1em);
+  }
+}

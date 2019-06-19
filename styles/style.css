@@ -1,0 +1,381 @@
+/* body{
+  position: fixed;
+} */
+
+
+main {
+  display: flex;
+  justify-content: center;
+  overflow:hidden;
+}
+
+main > svg{
+  /* position: absolute; */
+  position: fixed;
+  transform:scale(1.03);
+  top:2vw;
+  left:0;
+  right:0;
+  z-index: 0;
+}
+
+
+/* p {
+  z-index:20;
+  /* position: absolute;
+  top: 2em;
+  text-align: justify;
+  left:50vw;
+  right:15vw; */
+  /* font-size: 1.2em; */
+  /* opacity:0; */
+/* }  */
+
+p{
+  font-family: "Skema Pro Livro";
+  font-size: 1em;
+  color:white;
+}
+
+svg.intro.delighter{
+  transform:scale(1.05);
+  top:2vw;
+  left:0;
+  right:0;
+  position: absolute;
+  top: 0em;
+  z-index: 100;
+}
+
+
+.delighter.intro.started {
+  transform: none;
+  opacity: 1;
+}
+
+.delighter.P1.intro.ended {
+    opacity: 0;
+}
+
+p.P1{
+  position: absolute;
+  top: 80em;
+  z-index: 20;
+}
+
+p.P2{
+  position: absolute;
+  top: 120em;
+  z-index: 20;
+}
+
+p.P3{
+  position: absolute;
+  top: 160em;
+  z-index: 20;
+}
+
+p.P4{
+  position: absolute;
+  top: 200em;
+  z-index: 20;
+}
+
+.volgende{
+  background-color: rgb(56, 56, 81);
+  top: 210em;
+  left:74.4vw;
+  padding: 15px 32px;
+  color: white;
+  position: absolute;
+  z-index: 20;
+  cursor: pointer;
+  text-align: center;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+  font-family: "Skema Pro Livro";
+}
+.volgende:hover{
+  background-color: #535375;
+}
+
+div.P5{
+  position: absolute;
+  width:10em;
+  height:10em;
+  top: 230em;
+  z-index: 20;
+}
+
+
+
+/* https://hansaarsman.nl/page/363/aarsman-collectie kleur van de tekstvlakken */
+.P1.delighter{
+  transition: all .3s ease-in;
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.delighter.P1.started {
+  transform: none;
+  opacity: 1;
+}
+
+.delighter.P1.started.ended {
+  background-color: #fc6a78;
+  padding: 2em;
+  margin-right: 3.5em;
+}
+
+
+.P2.delighter{
+  transition: all .3s ease-in;
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.P2.delighter.started {
+  transform: none;
+  opacity: 1;
+}
+
+.P2.delighter.started.ended {
+  background-color: #fc6a78;
+  padding: 2em;
+  margin-right: 3.5em;
+}
+
+.P3.delighter{
+  transition: all .3s ease-in;
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.P3.delighter.started {
+  transform: none;
+  opacity: 1;
+}
+
+.P3.delighter.started.ended {
+  background-color: #fc6a78;
+  padding: 2em;
+  margin-right: 3.5em;
+}
+
+.P4.delighter{
+  transition: all .3s ease-in;
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.P4.delighter.started {
+  transform: none;
+  opacity: 1;
+}
+
+.P4.delighter.started.ended {
+  background-color: #fc6a78;
+  padding: 2em;
+  margin-right: 3.5em;
+}
+
+
+
+
+
+
+/* WOLKEN ANIMTAIE */
+g#DUBBLEWOLK{
+  animation: wolken 5s ease infinite alternate;
+  opacity: 1;
+  z-index:10;
+}
+@keyframes wolken {
+  0%{
+    transform:translate(-0em, 1em);
+    opacity: 0.3;
+  }
+  25%{
+    transform:translate(-5em, 1em);
+     opacity: 0.7;
+  }
+  50%{
+    transform:translate(-7em, 1em);
+    opacity: 0.7;
+  }
+  75%{
+    transform:translate(-5em, 1em);
+    opacity: 0.5;
+  }
+  100%{
+    transform:translate(-0em, 1em);
+    opacity: 0.3;
+  }
+}
+
+
+
+
+/* ANIMATIE VOGEL bron: https://css-tricks.com/guide-svg-animations-smil/
+https://developer.mozilla.org/en-US/docs/Web/CSS/transform-origin
+*/
+svg#Vliegendevogel{
+  transform: scale(0.2) translateX(-140em) translateY(-50em);
+  z-index: 20;
+  animation: fly 5s ease infinite alternate;
+  position:fixed;
+}
+
+.lichaam_vogel{
+  fill:#3b5093;
+}
+.vleugel_vogel{
+  fill:#485caf;
+}
+
+
+
+
+@keyframes fly {
+ from{
+    transform: scale(0.2) translateX(-140em) translateY(-50em);
+  }
+  15%{
+    transform: scale(0.2) translateX(-120em) translateY(-50em);
+  }
+  25%{
+    transform: scale(0.2) translateX(-50em) translateY(-40em);
+  }
+  35%{
+    transform: scale(0.2) translateX(50em) translateY(-50em);
+  }
+  50%{
+    transform: scale(0.2) translateX(150em) translateY(-40em) rotate3d(0, 1, 0, 180deg);
+  }
+  65%{
+    transform: scale(0.2) translateX(50em) translateY(-50em) rotate3d(0, 1, 0, 180deg);
+  }
+
+  75%{
+    transform: scale(0.2) translateX(-50em) translateY(-40em) rotate3d(0, 1, 0, 180deg);
+  }
+  85%{
+    transform: scale(0.2) translateX(-120em) translateY(-50em) rotate3d(0, 1, 0, 180deg);
+  }
+  to{
+     transform: scale(0.2) translateX(-140em) translateY(-50em) rotate3d(0, 1, 0, 180deg);
+   }
+}
+
+/* Dinolopen  Bron: https://developer.mozilla.org/en-US/docs/Web/CSS/animation*/
+g#PLANTENETER{
+  animation: Dinolopen 6s ease infinite alternate;
+  transform-origin: 30%;
+}
+
+@keyframes Dinolopen {
+  from{
+      transform:translate3d(0rem, 0, 0rem) rotate3d(0, 1, 0, 0deg) scale3d(1, 1, 1);
+  }
+  25%{
+      transform:translate3d(2rem, 0, 0rem) rotate3d(0, 1, 0, 0deg) scale3d(1, 1, 1);
+  }
+  40%{
+      transform:translate3d(3rem, 0, 0rem) rotate3d(0, 1, 0, 90deg) scale3d(1.01, 1.01, 1.01);
+}
+50%{
+    transform:translate3d(3rem, 0, 0rem) rotate3d(0, 1, 0, 180deg) scale3d(1.02, 1.02, 1.02);
+}
+60%{
+    transform:translate3d(3rem, 0, 0rem) rotate3d(0, 1, 0, 90deg) scale3d(1.01, 1.01, 1.01);
+}
+  75%{
+        transform:translate3d(2rem, 0, 0rem) rotate3d(0, 1, 0, 0deg) scale3d(1, 1, 1);
+  }
+  to{
+      transform:translate3d(0rem, 0, 0rem) rotate3d(0, 1, 0, 0deg) scale3d(1, 1, 1);
+  }
+}
+
+g#TREX{
+  animation: reklopen 9s ease infinite alternate;
+  transform-origin: 70%;
+}
+
+@keyframes reklopen {
+  from{
+      transform:translate3d(0rem, 0, 0rem) rotate3d(0, 1, 0, 0deg) scale3d(1, 1, 1);
+  }
+  25%{
+      transform:translate3d(2rem, 0, 0rem) rotate3d(0, 1, 0, 0deg) scale3d(1, 1, 1);
+  }
+  40%{
+      transform:translate3d(3rem, 0, 0rem) rotate3d(0, 1, 0, 90deg) scale3d(1.01, 1.01, 1.01);
+}
+50%{
+    transform:translate3d(3rem, 0, 0rem) rotate3d(0, 1, 0, 180deg) scale3d(1.02, 1.02, 1.02);
+}
+60%{
+    transform:translate3d(3rem, 0, 0rem) rotate3d(0, 1, 0, 90deg) scale3d(1.01, 1.01, 1.01);
+}
+  75%{
+        transform:translate3d(2rem, 0, 0rem) rotate3d(0, 1, 0, 0deg) scale3d(1, 1, 1);
+  }
+  to{
+      transform:translate3d(0rem, 0, 0rem) rotate3d(0, 1, 0, 0deg) scale3d(1, 1, 1);
+  }
+}
+
+
+/* Water en een walvis */
+path#Waterdunner_1_, g#Walvis1, path#Waterdikker_2_{
+  animation: zwemmen 3s ease infinite alternate;
+}
+
+path#Waterdikker_3_, g#Walvis2, path#Waterdikker_1_{
+    animation: zwemmen 4.4s ease infinite alternate;
+  }
+
+
+path#Waterdikker_4_, path#water_onder1, path#water_onder2{
+      animation: zwemmen 6s ease infinite alternate;
+    }
+
+    circle#scrollen{
+      animation: omlaag 3s ease infinite alternate;
+    }
+
+    @keyframes omlaag {
+      from{
+          transform:translate(0em, 0em);
+      }
+      to{
+          transform:translate(0em, -3em);
+      }
+
+    }
+
+@keyframes zwemmen {
+  0%{
+      transform:translate(1em, 1em);
+  }
+  25%{
+      transform:translate(2em, 0em);
+  }
+  50%{
+      transform:translate(3em, 1em);
+
+  75%{
+      transform:translate(2em, 0em);
+  }
+  100%{
+      transform:translate(1em, 1em);
+  }
+}
+
+#DinoBoom1-4{
+  left:5vw;
+}

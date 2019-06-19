@@ -1,0 +1,336 @@
+main {
+  display: flex;
+  justify-content: center;
+  overflow:hidden  !important;
+}
+
+main > svg{
+  transform:scale(1.05);
+  top:-0.9vw;
+  position: fixed;
+}
+
+/* https://css-tricks.com/almanac/properties/t/text-align/ https://fontstorage.com/font/mint-type/skema-pro-livro */
+p {
+  font-family: "Skema Pro Livro";
+  font-size: 1em;
+  color:white;
+}
+
+p.P1{
+  position: absolute;
+  top: 5em;
+  z-index: 200;
+}
+
+p.P2{
+  position: absolute;
+  top: 55em;
+  z-index: 200;
+}
+
+p.P3{
+  position: absolute;
+  top: 110em;
+  z-index: 200;
+}
+
+p.P4{
+  position: absolute;
+  top: 159em;
+  z-index: 200;
+}
+p.P7{
+  position: absolute;
+  top: 200em;
+  z-index: 200;
+}
+
+
+a{
+  color: white;
+  text-decoration: none;
+  font-family: "Skema Pro Livro";
+}
+
+.terug{
+  background-color: rgb(56, 56, 81);
+  top: 210em;
+  left:50vw;
+  padding: 15px 32px;
+  color: white;
+  position: absolute;
+  z-index: 20;
+  cursor: pointer;
+  text-align: center;
+}
+
+.terug:hover{
+  background-color: #535375;
+}
+
+.inzoom{
+  background-color: rgb(56, 56, 81);
+  top: 210em;
+  left:79.5vw;
+  padding: 15px 32px;
+  color: white;
+  position: absolute;
+  z-index: 20;
+  cursor: pointer;
+  text-align: center;
+}
+
+.inzoom:hover{
+  background-color: #535375;
+}
+
+.vergoot{
+  opacity:1 !important;
+  animation: foto 4s ease-in-out;
+}
+
+@keyframes foto {
+  0%   100%{
+
+    transform: scale(1);
+
+  }
+  50%{
+    transform: scale(1.8);
+    top: 210em;
+
+  }
+}
+
+.afbeelding{
+  opacity:0;
+  top: 221em;
+  width: 30em;
+  height: 18em;
+  position: absolute;
+  z-index: 200;
+  left: 42vw;
+  cursor:pointer;
+}
+
+div.P5{
+  position: absolute;
+  width:10em;
+  height:10em;
+  top: 229em;
+  z-index: 200;
+}
+
+/* https://hansaarsman.nl/page/363/aarsman-collectie kleur van de tekstvlakken */
+.P1.delighter{
+  transition: all .3s ease-in;
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.delighter.P1.started {
+  transform: none;
+  opacity: 1;
+}
+
+.delighter.P1.started.ended {
+  background-color: #fc6a78;
+  padding: 2em;
+  margin-right: 3.5em;
+}
+
+
+.P2.delighter{
+  transition: all .3s ease-in;
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.P2.delighter.started {
+  transform: none;
+  opacity: 1;
+}
+
+.P2.delighter.started.ended {
+  background-color: #fc6a78;
+  padding: 2em;
+  margin-right: 3.5em;
+}
+
+.P3.delighter{
+  transition: all .3s ease-in;
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.P3.delighter.started {
+  transform: none;
+  opacity: 1;
+}
+
+.P3.delighter.started.ended {
+  background-color: #fc6a78;
+  padding: 2em;
+  margin-right: 3.5em;
+}
+
+.P4.delighter{
+  transition: all .3s ease-in;
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.P4.delighter.started {
+  transform: none;
+  opacity: 1;
+}
+
+.P4.delighter.started.ended {
+  background-color: #fc6a78;
+  padding: 2em;
+  margin-right: 3.5em;
+}
+
+
+.P7.delighter{
+  transition: all .3s ease-in;
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.P7.delighter.started {
+  transform: none;
+  opacity: 1;
+}
+
+.P7.delighter.started.ended {
+  background-color: #fc6a78;
+  padding: 2em;
+  margin-right: 3.5em;
+}
+
+
+/* WOLKEN ANIMTAIE */
+g#DUBBLEWOLK{
+  animation: wolken 5s ease infinite alternate;
+  opacity: 1;
+  z-index:10;
+}
+@keyframes wolken {
+  0%{
+    transform:translate(-0em, 1em);
+    opacity: 0.3;
+  }
+  25%{
+    transform:translate(-5em, 1em);
+     opacity: 0.7;
+  }
+  50%{
+    transform:translate(-7em, 1em);
+    opacity: 0.7;
+  }
+  75%{
+    transform:translate(-5em, 1em);
+    opacity: 0.5;
+  }
+  100%{
+    transform:translate(-0em, 1em);
+    opacity: 0.3;
+  }
+}
+
+/* https://css-tricks.com/almanac/properties/t/transform-origin/
+ https://codepen.io/shshaw/pen/pOVKjb
+ https://codepen.io/pen/?&editable=true
+ */
+
+g#Reuzenrad{
+   /* transform-origin: 20%; */
+   animation: draaien 2s ease infinite;
+ }
+
+
+ @keyframes draaien {
+   0% {
+     transform:translate(1px, 0) rotate(0);
+   }
+   25% {
+     transform:translate(1px, 0) rotate(90);
+
+   }
+   50% {
+     transform:translate(3px, 0) rotate(180);
+   }
+   75% {
+     transform:translate(2px, 0) rotate(270);
+   }
+   100% {
+     transform:translate(0, 0) rotate(360);
+   }
+ }
+
+
+g#Groep1, g#Groep3{
+  animation: lopen1 2s ease infinite;
+}
+
+@keyframes lopen1 {
+  0% {
+    transform:translate(0, 0);
+  }
+  25% {
+    transform:translate(1px, 0);
+  }
+  50% {
+    transform:translate(3px, 0);
+  }
+  75% {
+    transform:translate(2px, 0);
+  }
+  100% {
+    transform:translate(0, 0);
+  }
+}
+
+
+g#Groep2{
+  animation: lopen2 2s ease infinite;
+}
+
+  @keyframes lopen2 {
+    0% {
+      transform:translate(0, 0);
+    }
+    25% {
+      transform:translate(3px, 0);
+    }
+    50% {
+      transform:translate(2px, 0);
+    }
+    75% {
+      transform:translate(3px, 0);
+    }
+    100% {
+      transform:translate(0, 0);
+    }
+}
+
+/*
+Water die komt
+
+https://codepen.io/geoffgraham/pen/pbQakX
+https://css-tricks.com/lodge/svg/06-using-svg-svg-background-image/
+https://css-tricks.com/use-cases-fixed-backgrounds-css/
+ */
+  .WATER {
+    overflow: hidden !important;
+    position: relative;
+    fill:#4ca6ff;
+    top:60vw;
+    transform: scale(1.02);
+    left:0;
+    z-index:30;
+    opacity: 0.5;
+
+  }
